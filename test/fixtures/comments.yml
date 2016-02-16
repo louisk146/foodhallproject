@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commenter: MyString
+  contact: MyString
+  body: MyText
+  foodfreecycle_id: 
+
+two:
+  commenter: MyString
+  contact: MyString
+  body: MyText
+  foodfreecycle_id: 

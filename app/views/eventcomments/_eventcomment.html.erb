@@ -1,0 +1,21 @@
+
+  <p>
+    <strong>Commenter:</strong>
+    <%= eventcomment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= eventcomment.body %>
+  </p>
+
+<p>
+    <strong>Contact:</strong>
+    <%= eventcomment.contact %>
+</p>
+
+<p>
+  <%= link_to 'Delete Comment', [eventcomment.event, eventcomment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

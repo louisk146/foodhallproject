@@ -1,0 +1,2 @@
+module FoodfreecyclesHelper
+end

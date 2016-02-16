@@ -1,0 +1,62 @@
+
+
+<%= form_for @foodfreecycle, html: { multipart: true } do |f| %>
+
+  
+
+<h2> The food listed here is free by default </h2>
+
+
+<% if @foodfreecycle.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@foodfreecycle.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @foodfreecycle.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<p>
+<%= f.label :Wanted %>
+<%=radio_button :foodfreecycle, :status, :wanted %> 
+<p>
+
+<p>
+<%= f.label :Offer %>
+<%=radio_button :foodfreecycle, :status, :offer %>
+</p>
+
+  <p>
+    <%= f.label :food %><br>
+    <%= f.text_field :food %>
+  </p>
+
+   <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+ 
+  <p>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+ <p>
+    <%= f.label :email %><br>
+    <%= f.text_area :email %>
+  </p>
+
+  <p>
+    <%= f.submit "submit foodfreecycle", class: "button" %>
+  </p>
+<% end %>

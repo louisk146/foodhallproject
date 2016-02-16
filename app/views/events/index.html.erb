@@ -1,0 +1,45 @@
+<h1>The Feast-feed</h1>
+ 
+<p> All events free, pay as you feel or suggested donation.</p>
+
+<%= link_to '<button>Back</button>'.html_safe, controller: 'welcome' %>
+
+<p><%= link_to '<button>Add an event</button>'.html_safe, new_event_path %></p>
+
+
+ <thead>
+<table>
+  <tr>
+    <!-- <th style="padding:5px 10px 5px 10px;">Image:</th> -->
+    <th style="padding:5px 10px 5px 10px;">Event:</th>
+    <th style="padding:5px 10px 5px 10px;">Location:</th>
+    <th style="padding:5px 10px 5px 10px;">description:</th>
+    <th style="padding:5px 10px 5px 10px;">Event date:</th>
+    <th style="padding:5px 10px 5px 10px;">Email or best contact:</th>
+  </tr>
+ </thread>
+
+
+
+<tbody>
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= image_tag event.image.url(:medium) %></td>
+      <td style="padding:5px 10px 5px 10px; font-weight:bold"><%= event.title %></td>
+      <td style="padding:5px 10px 5px 10px;"><%= event.location %></td>
+      <td style="padding:5px 10px 5px 10px;"><%= event.description %></td>
+      <td style="padding:5px 10px 5px 10px;"><%= event.date %>   </td>
+      <td style="padding:5px 10px 5px 10px;"><%= event.email %></td>
+
+      <td style="padding:5px 10px 5px 10px;"><%= link_to 'Show', event_path(event) %></td>
+      <td style="padding:5px 10px 5px 10px;"><%= link_to 'Edit', edit_event_path(event) %></td>
+     <!-- <td style="padding:5px 10px 5px 10px;"><%= link_to 'Destroy', event_path(event),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td> -->
+
+    </tr>
+  </tbody>
+  <% end %>
+</table>
+
+  

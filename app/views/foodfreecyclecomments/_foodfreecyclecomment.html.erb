@@ -1,0 +1,29 @@
+<%= div_for(comment) do %>
+	<div class="comments_wrapper clearfix">
+		<div class="pull-left">
+			<p class="lead">
+<p>
+  <strong>Commenter:</strong>
+  <%= foodfreecyclecomment.commenter %>
+</p>
+ 
+<p>
+  <strong>Comment:</strong>
+  <%= foodfreecyclecomment.body %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= foodfreecyclecomment.contact %>
+</p>
+</div>
+
+<div class="btn-group pull-right">
+<p>
+  <%= link_to 'Delete Comment', [foodfreecyclecomment.foodfreecycle, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
+			<% end %>
+		</div>
+	</div>

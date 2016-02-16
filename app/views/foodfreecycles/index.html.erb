@@ -1,0 +1,52 @@
+<p>The Food-feed</p>
+ <p> Take what you need. Give what you don't. </p>
+
+
+
+
+<%= link_to '<button>Back</button>'.html_safe, controller: 'welcome' %>
+<p> <%= link_to '<button>Add an item</button>'.html_safe, new_foodfreecycle_path %></p>
+
+<table>
+<thread>
+
+  <tr>
+    <th style="padding:3px 7px 3px 7px;">Status</th>
+    <th style="padding:3px 7px 3px 7px;">Food:</th>
+    <th style="padding:3px 7px 3px 7px;">Location:</th>
+    <th style="padding:3px 7px 3px 7px;">Date of creation:</th>
+    <!--<th>description</th> -->
+    <!--<th>Email or best contact</th> -->
+  </tr>
+
+</thread>
+
+<tbody>
+  <% @foodfreecycles.each do |foodfreecycle| %>
+
+    <tr> 
+      <p>
+      <td style="padding:5px 30px 5px 30px;font-weight:bold"><%= foodfreecycle.status %></td> <!-- green  if wanted it is orange if offered green-->
+      <td style="padding:5px 30px 5px 30px;"><%= foodfreecycle.food %></td>
+      <td style="padding:5px 30px 5px 30px;"><%= foodfreecycle.location %></td>
+    <!-- <td><%= foodfreecycle.description %></td> -->
+    <!--<td><%= foodfreecycle.email %></td>-->
+      <!--<td><%= image_tag foodfreecycle.image.url(:thumb) %></td> -->
+    <td style="padding:5px 30px 5px 30px;">
+    <%= foodfreecycle.created_at.strftime("%b %d, %l %p ,%Y") %>
+    <td>
+
+ <td style="padding:5px 10px 5px 10px;"><%= link_to 'Show', foodfreecycle_path(foodfreecycle) %></td>
+      <td style="padding:5px 10px 5px 10px;"><%= link_to 'Edit', edit_foodfreecycle_path(foodfreecycle) %></td>
+      <!--<td style="padding:5px 10px 5px 10px;"><%= link_to 'Destroy', foodfreecycle_path(foodfreecycle),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>-->
+
+    </tr>
+  </tbody>
+
+  </span>
+  <% end %>
+
+
+

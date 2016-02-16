@@ -1,0 +1,38 @@
+<p><%= image_tag @foodfreecycle.image.url(:large) %></p>
+
+
+<p>
+  <strong>Status:</strong>
+  <%= @foodfreecycle.status %>
+</p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @foodfreecycle.food %>
+</p>
+ 
+<p>
+  <strong>location:</strong>
+  <%= @foodfreecycle.location %>
+</p>
+
+<p>
+  <strong>description:</strong>
+  <%= @foodfreecycle.description %>
+</p>
+
+<p>
+  <strong>email or best contact:</strong>
+  <%= @foodfreecycle.email %>
+</p>
+
+
+<h2>Comments</h2>
+<%= render @foodfreecycle.foodfreecyclecomments %>
+
+<h2>Add a comment:</h2>
+
+<%= render 'foodfreecyclecomments/form' %>
+
+<%= link_to 'Edit', edit_foodfreecycle_path(@foodfreecycle) %>
+<%= link_to 'Back to foodfeed', foodfreecycles_path %>

@@ -1,0 +1,43 @@
+
+<p><%= image_tag @event.image.url(:large) %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+ 
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>contact:</strong>
+  <%= @event.email %>
+</p>
+
+<p>
+  <strong>date</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @event.time %>
+</p>
+
+<h2>Comments</h2>
+
+<%= render @event.eventcomments %>
+
+<h2>Add a comment:</h2>
+
+<%= render 'eventcomments/form' %>
+
+<%= link_to 'Edit', edit_event_path(@event) %>
+<%= link_to 'Back to the feastfeed', events_path %>
