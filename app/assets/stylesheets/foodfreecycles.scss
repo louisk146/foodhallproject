@@ -30,3 +30,31 @@ span {
   display: block;
   color: #707070;
 }
+
+
+imageupload {
+    position: relative;
+}
+
+imageupload .wrapper {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    }
+
+imageupload .wrapper:hover {
+    opacity: 0.5;
+}
+
+imageupload button {
+    background-color: #ccc;
+    border: none;
+    color: #666;
+    padding: 3px 5px;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}

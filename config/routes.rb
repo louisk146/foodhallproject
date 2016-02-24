@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/about'
+
+  get 'static_pages/contact'
+
   devise_for :admins
   get 'welcome/index'
 
@@ -9,5 +13,7 @@ end
   resources :foodfreecycles do
   	resources :foodfreecyclecomments
 end
+
+
   root 'welcome#index'
 end
