@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 300;
+}
+
+.colophon {  
+  width: 100%;
+  height: 204px;
+  border-top: solid 1px rgba(178, 179, 153, .25);
+  border-bottom: solid 1px rgba(178, 179, 153, .25);
+}
+
+.colophon span {
+  float: left;
+  width: 1000px;
+  font-family: "Source Serif Pro";
+  font-size: 130px;
+  line-height: 204px;
+  text-align: center;
+  padding: 0
+}
+
+.colophon ul {
+  float: right;
+  width: 230px;
+  border-left: solid 1px rgba(178, 179, 153, .25);
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 20px 0;
+}
+
+.colophon ul li {
+  color: black;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.colophon ul li p {
+  border-top: solid 1px rgba(178, 179, 153, .25);
+  margin-top: 15px;
+  padding-top: 15px;
+}
+    
+.colophon ul li a {
+  color: #BFBFA8;
+  text-decoration: none;
+}
