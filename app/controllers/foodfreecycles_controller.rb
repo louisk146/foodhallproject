@@ -1,5 +1,7 @@
 class FoodfreecyclesController < ApplicationController
 
+http_basic_authenticate_with name: "Foodhall", password: "topsecretpassword", only: :destroy
+
   def index
     @foodfreecycles = Foodfreecycle.all.order('created_at DESC')
   end
