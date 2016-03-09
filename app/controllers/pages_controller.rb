@@ -8,4 +8,3 @@
   def contact
   end
 end
-end
