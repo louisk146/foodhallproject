@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
 
- def index
+http_basic_authenticate_with name: "Foodhall", password: "topsecretpassword", only: :destroy
+
+  def index
     @events = Event.all.order(date: :asc)
   end
 
