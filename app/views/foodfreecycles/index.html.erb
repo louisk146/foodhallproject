@@ -8,7 +8,7 @@
 <thread>
 
   <tr>
-    <th stule="padding:3px 7px 3px 7px;">Status:</th>
+    <th style="padding:3px 7px 3px 7px;">Status:</th>
     <th style="padding:3px 7px 3px 7px;">Food:</th>
     <th style="padding:3px 7px 3px 7px;">location:</th>
     <th style="padding:3px 7px 3px 7px;">Date added</th>
@@ -24,26 +24,34 @@
     <tr> 
       <p>
       <td style="padding:5px 30px 5px 30px;font-weight:bold"><%= foodfreecycle.status %></td> <!-- green  if wanted it is orange if offered green-->
-      <td style="padding:5px 30px 5px 30px;"><%= foodfreecycle.food %></td>
-      <td style="padding:5px 30px 5px 30px;"><%= foodfreecycle.location %></td>
+      <td style="padding:5px 30px 5px 30px; font-size:12px"><%= foodfreecycle.food %></td>
+      <td style="padding:5px 30px 5px 30px; font-size:12px"><%= foodfreecycle.location %></td>
     <!-- <td><%= foodfreecycle.description %></td> -->
     <!--<td><%= foodfreecycle.email %></td>-->
       <!--<td><%= image_tag foodfreecycle.image.url(:thumb) %></td> -->
-    <td style="padding:5px 30px 5px 30px;">
+    <td style="padding:5px 30px 5px 30px; font-size:12px">
     <%= foodfreecycle.created_at.strftime("%b %d, %l %p ,%Y") %>
     <td>
 
- <td style="padding:5px 10px 5px 10px;"><%= link_to 'Show', foodfreecycle_path(foodfreecycle) %></td>
-      <td style="padding:5px 10px 5px 10px;"><%= link_to 'Edit', edit_foodfreecycle_path(foodfreecycle) %></td>
-      <td style="padding:5px 10px 5px 10px;"><%= link_to 'Destroy', foodfreecycle_path(foodfreecycle),
+ <td style="padding:5px 10px 5px 10px;font-size:9px"><%= link_to 'Show', foodfreecycle_path(foodfreecycle) %></td>
+      <td style="padding:5px 10px 5px 10px; font-size:9px"><%= link_to 'Edit', edit_foodfreecycle_path(foodfreecycle) %></td>
+      <td style="padding:5px 10px 5px 10px; font-size:9px"><%= link_to 'Delete', foodfreecycle_path(foodfreecycle),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
 
     </tr>
   </tbody>
-
   </span>
   <% end %>
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-75081313-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

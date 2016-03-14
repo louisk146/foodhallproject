@@ -1,4 +1,4 @@
-<%= link_to '<button>Back to foodfeed</button>', foodfreecycles_path %>
+<%= link_to '<button>Back to foodfeed</button>'.html_safe, foodfreecycles_path %>
 
 <p><%= image_tag @foodfreecycle.image.url(:large) %></p>
 
@@ -36,4 +36,4 @@
 
 <%= render 'foodfreecyclecomments/form' %>
 
-<%= link_to '<button>Edit</button>', edit_foodfreecycle_path(@foodfreecycle) %>
+<%= link_to '<button>Edit</button>'.html_safe, edit_foodfreecycle_path(@foodfreecycle) %>

@@ -14,6 +14,7 @@ end
   	resources :foodfreecyclecomments
 end
 
+	resources :archive
 
   root 'welcome#index'
 end
