@@ -11,9 +11,10 @@
     <th style="padding:3px 7px 3px 7px;">Status:</th>
     <th style="padding:3px 7px 3px 7px;">Food:</th>
     <th style="padding:3px 7px 3px 7px;">location:</th>
+    <th>Contact</th>
     <th style="padding:3px 7px 3px 7px;">Date added</th>
     <!--<th>description</th> -->
-    <!--<th>Email or best contact</th> -->
+   
   </tr>
 
 </thread>
@@ -27,10 +28,11 @@
       <td style="padding:5px 30px 5px 30px; font-size:12px"><%= foodfreecycle.food %></td>
       <td style="padding:5px 30px 5px 30px; font-size:12px"><%= foodfreecycle.location %></td>
     <!-- <td><%= foodfreecycle.description %></td> -->
-    <!--<td><%= foodfreecycle.email %></td>-->
+    <td><%= foodfreecycle.email %></td>
       <!--<td><%= image_tag foodfreecycle.image.url(:thumb) %></td> -->
     <td style="padding:5px 30px 5px 30px; font-size:12px">
     <%= foodfreecycle.created_at.strftime("%b %d, %l %p ,%Y") %>
+    
     <td>
 
  <td style="padding:5px 10px 5px 10px;font-size:9px"><%= link_to 'Show', foodfreecycle_path(foodfreecycle) %></td>

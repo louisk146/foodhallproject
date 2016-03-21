@@ -1,7 +1,7 @@
 class FoodfreecyclecommentsController < ApplicationController
   def create
-    @foodfreecycle = Foodfreecycle.find(params[:foodfreecycle_id])
-    @foodfreecyclecomment = @foodfreecycle.foodfreeyclecomments.create(foodfreecyclecomment_params)
+    @foodfreecycle = Foodfreecycle.find (params[:foodfreecycle_id])
+    @foodfreecyclecomment = @foodfreecycle.foodfreecyclecomments.create(foodfreecyclecomment_params)
     redirect_to foodfreecycle_path(@foodfreecycle)
   end
  
@@ -14,6 +14,8 @@ class FoodfreecyclecommentsController < ApplicationController
 
   private
     def foodfreecyclecomment_params
-      params.require(:foodfreecycecomment).permit(:commenter, :body, :contact)
+      params.require(:foodfreecyclecomment).permit(:commenter, :body, :contact)
     end
 end
+
+
