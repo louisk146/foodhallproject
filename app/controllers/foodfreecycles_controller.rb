@@ -22,10 +22,17 @@ def create
   @foodfreecycle = Foodfreecycle.new(foodfreecycle_params)
  
 if @foodfreecycle.save
+ 
+  #users.each do |user|
+  FoodfreecycleMailer.foodfreecycle_created(@user).deliver_now
+  #end
+
   redirect_to @foodfreecycle
+
 else
   render 'new'
 end
+
 end
 
 def update

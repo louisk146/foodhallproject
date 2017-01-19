@@ -1,0 +1,39 @@
+<h1> New </h1>
+
+<%= form_for :archive, url: archive_path do |f| %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :event_description %>
+  </p>
+ 
+
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+ <p>
+    <%= f.label :organiserdetails %><br>
+    <%= f.text_field :organiser_contact %>
+  </p>
+
+<p>
+    <%= f.label :eventduration %><br>
+    <%= f.text_field :event_duration%>
+  </p>
+
+<!-- <p>
+  <%= f.label :Event_date %><br>
+   <%= f.date_select :date %>
+ </p> -->
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

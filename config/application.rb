@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+# for devise:config.assets.initialize_on_precompile = false
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -8,6 +9,18 @@ Bundler.require(*Rails.groups)
 
 module Foodhall
   class Application < Rails::Application
+    
+    ActionMailer::Base.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :domain               => 'mail.google.com',
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => "foodhallproject@gmail.com", #ENV['GMAIL_USERNAME']
+      :password             => "lasagnedisco18", #ENV['GMAIL_USERNAME']
+      :authentication       => 'login',
+      :enable_starttls_auto => true
+}
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
