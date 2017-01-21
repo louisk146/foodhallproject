@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-buttonplacement {
+.button-placement 
+{
   color: white ;
   text-transform: uppercase;
   font-size: 20px;
@@ -42,11 +43,24 @@ body.welcome
 
 P { color: #1f1f14; text-align: center }
 
-
-headlinetext { color: #ffffff;
+.headline-text 
+{ color: #ffffff;
   text-align: center; 
   font-size: 40px;
   line-height: 50px;
+  font-weight: 100;
+  margin-top: 20px;
+  bottom: 400px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center; }
+
+.second-headline-text 
+{ color: #ffffff;
+  text-align: center; 
+  font-size: 24px;
+  line-height: 110%;
   font-weight: 100;
   margin-top: 20px;
   bottom: 170px;
