@@ -1,23 +1,33 @@
- <div id="header-wrap">
-   <p> No log in required. Open Access, moderation and use.</p? 
+<!doctype html>
+
+<html>
+
+<body class="container welcome">
+
+<!--<%= image_tag('background.jpg', style: "height: 30px; width: 30px") %>-->
+
+<div class="content">
+<div id="header-wrap">
+  <p><img alt="logo" src="/assets/plenty by foodhall white.png" /> </p>
+   <!--<p> No log in required. Open Access, moderation and use.</p> --> 
 </div>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<div class="wrap"> 
 
- <div class="wrap"> 
-   <img alt="logo" src="/assets/logo.png" /> 
-		<p>  Join the open table! </p>
- 			<p><%= link_to '<button>FoodFreecycle</button>'.html_safe, controller: 'foodfreecycles' %>
-				<%= link_to '<button>Meals</button>'.html_safe, controller: 'events' %>
-					</span></p> 
+  </div>
+
+<div class="headline-text"> Meet your neighborhood by <br/> hosting comunity meals and get-togethers <br> where you live! </div>
+
+
+ <div class="button-placement"><!--<%= link_to '<button>FoodFreecycle</button>'.html_safe, controller: 'foodfreecycles' %> -->
+      <%= link_to '<button>.   Browse   .</button>'.html_safe, controller: 'events' %> 
+          </span></div>
     			
 <footer><%= link_to "About the project", "/static_pages/about" %> | <%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %> </footer>
-
-</div>
-
- 
 
 
 <script>
@@ -28,11 +38,15 @@
 
   ga('create', 'UA-75081313-1', 'auto');
   ga('send', 'pageview');
-
 </script>
+
+</div>
+</div>
+  </header>  
 
 <!--<div class="landing">
   <video src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Night-Traffic.mp4" autoplay muted loop></video>
-</div> --!>
+</div> -->
+
 
 

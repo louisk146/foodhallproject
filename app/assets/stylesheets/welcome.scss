@@ -3,9 +3,57 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.button-placement {
+  color: white ;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 400;
+  margin-top: 60px;
+  bottom: 100px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+}
+
+
+body.welcome
+{background: image-url('background.jpg');
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+  }
+
 P { color: #1f1f14; text-align: center }
-H1 { color: #1f1f14; text-align: center }
-H2 { color: #BFBFA8; text-align: center }
+
+
+.headline-text { color: #ffffff;
+  text-align: center; 
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 100;
+  margin-top: 20px;
+  bottom: 170px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center; }
 
 
 .wrap {
@@ -13,12 +61,13 @@ H2 { color: #BFBFA8; text-align: center }
 	top: 50%;
 	left: 50%;
 	margin-top: -150px;
-	margin-left: -150px;
+	margin-left: -200px;
 	text-align: center;
 }
 
 
 Button {
+	text-color: black;
 	-moz-box-shadow: 0px 0px 4px 0px #000000;
 	-webkit-box-shadow: 0px 0px 4px 0px #000000;
 	box-shadow: 0px 0px 4px 0px #000000;
@@ -31,10 +80,12 @@ Button {
 	cursor:pointer;
 	color:#000000;
 	font-family:Arial;
-	font-size:17px;
+	font-size:24px;
 	padding:3px 20px;
 	text-decoration:none;
 }
+
+
 Button:hover {
 	background-color:#ffffff;
 }
@@ -44,15 +95,7 @@ Button:active {
 	top:1px;
 }
 
-
-
 html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 
