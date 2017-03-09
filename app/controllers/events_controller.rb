@@ -3,11 +3,12 @@ class EventsController < ApplicationController
 http_basic_authenticate_with name: "Foodhall", password: "topsecretpassword", only: :destroy
 
   def index
-    @events = Event.all.order(date: :asc)
+    @events = Event.all.order(date: :desc)
   end
 
  def show
-    @event = Event.find(params[:id])
+    @event = Event.find(:all, :order => "start")
+    @events.sort_by {|event| event.date}
   end
 
 def new

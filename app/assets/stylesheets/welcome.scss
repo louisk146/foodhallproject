@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+body.events {
+    background-color: #white;
+}
+
+
 .button-placement 
 {
   color: white ;
@@ -45,6 +50,7 @@ P { color: #1f1f14; text-align: center }
 
 .headline-text 
 { color: #ffffff;
+  font-family: "Arial Narrow", Arial, sans-serif;
   text-align: center; 
   font-size: 40px;
   line-height: 50px;
@@ -58,6 +64,7 @@ P { color: #1f1f14; text-align: center }
 
 .second-headline-text 
 { color: #ffffff;
+  font-family: "Arial Narrow", Arial, sans-serif;
   text-align: center; 
   font-size: 24px;
   line-height: 110%;

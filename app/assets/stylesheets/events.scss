@@ -2,16 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 20px;
   text-align: left;
   margin: 0 auto;
   margin-top: 10px;
 }
 
 th, td {
+  background-color: white;
   border-bottom: 1px solid #c6c9cc;
   padding: 4px 25px;
   text-align: left;}
@@ -26,16 +26,16 @@ span {
   color: #707070;
 }
 
-
 imageupload {
   position: relative;
   overflow: hidden;
   margin: 10px;
-  background-color: #BDBDBD;
+  background-color: #white;
   height: 200px;
   width: 200px;
   text-align: center;
 }
+
 imageupload input.upload {
   position: absolute;
   top: 0;

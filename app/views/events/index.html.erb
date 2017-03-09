@@ -1,6 +1,11 @@
-<p> The Feast-feed. <br> All events free, pay as you feel or suggested donation.</p>
+<body class="container events">
+
+
+<br> All events free, pay as you feel or suggested donation.</p>
 
 <%= link_to '<button>Back</button>'.html_safe, controller: 'welcome' %>
+
+<p> <img alt="logo" src="/assets/how plenty works.jpg" /> </p>
 
 <p><%= link_to '<button>Add an event</button>'.html_safe, new_event_path %></p>
 <p style="font-size:10px"><%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %> </p>
@@ -15,20 +20,18 @@
     <th style="padding:5px 10px 5px 10px;">description:</th>
     <th style="padding:5px 10px 5px 10px;">Event date:</th>
     <th style="padding:5px 10px 5px 10px;">Email or best contact:</th>
+    <th style="padding:5px 10px 5px 10px;">Event comments:</th>
   </tr>
  </thread>
 
 <tbody>
-  <% @events.each do |event| %>
+  <% @events.each do |event| %> 
     <tr>
-
       <td style="padding:5px 10px 5px 10px;"><%= image_tag event.image.url(:medium) %></td>
       <td style="padding:5px 10px 5px 10px; font-weight:bold"><%= event.title %></td>
       <td style="padding:5px 10px 5px 10px; font-size:12px"> <%= event.location %></td>
       <td style="min-width:10px padding:5px 10px 5px 10px; font-size:12px"><%= truncate event.description, length: 40 %>
-     <p style="font-size:10px">  <%= link_to 'More', event %></p> 
-
-      </td> 
+      <p style="font-size:10px">  <%= link_to 'More', event %></p> </td>
      <!-- <td style="padding:5px 10px 5px 10px; font-size:12px"><%= event.description %></td> -->
       <td style="padding:5px 10px 5px 10px; font-size:12px"><%= event.date %>   </td>
       <td style="padding:5px 10px 5px 10px;font-size:12px"><%= event.email %></td>
@@ -37,8 +40,7 @@
       <td style="padding:5px 10px 5px 12px; font-size:10px"><%= link_to 'Delete', event_path(event),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td> 
-
-    </tr>
+      
   </tbody>
   <% end %>
 </table>
@@ -54,3 +56,4 @@
   ga('send', 'pageview');
 
 </script>
+</body>
