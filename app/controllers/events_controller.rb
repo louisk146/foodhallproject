@@ -7,8 +7,7 @@ http_basic_authenticate_with name: "Foodhall", password: "topsecretpassword", on
   end
 
  def show
-    @event = Event.find(:all, :order => "start")
-    @events.sort_by {|event| event.date}
+    @event = Event.find(params[:id])
   end
 
 def new

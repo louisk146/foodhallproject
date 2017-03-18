@@ -1,11 +1,8 @@
-
-
 <%= form_for @foodfreecycle, html: { multipart: true } do |f| %>
 
   
 
 <h2> The food listed here is free by default </h2>
-
 
 <% if @foodfreecycle.errors.any? %>
     <div id="error_explanation">
