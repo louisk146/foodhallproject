@@ -5,4 +5,8 @@ class Event < ActiveRecord::Base
 has_many :eventcomments, dependent: :destroy
   validates :title, presence: true,
                     length: { minimum: 5 }
+
+# searchkick text_start: [‘title’], text_start: [‘location’]
+
 end
+

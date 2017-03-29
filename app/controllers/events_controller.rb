@@ -2,6 +2,16 @@ class EventsController < ApplicationController
 
 http_basic_authenticate_with name: "Foodhall", password: "topsecretpassword", only: :destroy
 
+def search
+  @songs = Event.search(params[:query])
+  if request.xhr?
+    render :json => @event.to_json
+  else
+    render :index
+  end
+end
+
+
   def index
     @events = Event.all.order(date: :desc)
   end
