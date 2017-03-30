@@ -16,7 +16,7 @@ module Foodhall
       :port                 => 587,
       :domain               => "gmail.com",
       :user_name            => "foodhallproject@gmail.com", #ENV['GMAIL_USERNAME']
-      :password             => "lasagnedisco18", #ENV['GMAIL_USERNAME']
+      :password             =>  #ENV['GMAIL_USERNAME']
       :authentication       => 'login',
       :enable_starttls_auto => true
 }

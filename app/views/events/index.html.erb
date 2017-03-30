@@ -4,7 +4,7 @@
 <p><br> All events free, pay as you feel or fundraisers.</p>
 
 <p><%= link_to '<button>Add an event</button>'.html_safe, new_event_path %></p>
-<p style="font-size:10px"><%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %> </p>
+<p style="font-size:10px"><%= link_to "View recent events".html_safe, controller: 'archive' %> - <%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %> </p>
 
  <thread>
 <table>
@@ -21,7 +21,7 @@
  </thread>
 
 <tbody>
-  <% @events.each do |event| %> 
+  <% @upcoming_events.each do |event|%> 
     <tr>
       <td style="padding:5px 10px 5px 10px;"><%= image_tag event.image.url(:medium) %></td>
       <td style="padding:5px 10px 5px 10px; font-weight:bold"><%= event.title %></td>
