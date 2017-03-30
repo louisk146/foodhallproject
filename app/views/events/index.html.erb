@@ -21,7 +21,7 @@
  </thread>
 
 <tbody>
-  <% @upcoming_events.each do |event|%> 
+  <% @events.each do |event|%> 
     <tr>
       <td style="padding:5px 10px 5px 10px;"><%= image_tag event.image.url(:medium) %></td>
       <td style="padding:5px 10px 5px 10px; font-weight:bold"><%= event.title %></td>
