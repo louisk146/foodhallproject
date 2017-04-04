@@ -1,9 +1,9 @@
 <body class="container events">
 <%= link_to '<button>Back</button>'.html_safe, controller: 'welcome' %>
 
-<p><br> All events free, pay as you feel or fundraisers.</p>
+<p><br> Events that have recently happened in your area! </p>
 
-<p><%= link_to '<button>Add an event</button>'.html_safe, new_event_path %></p>
+<p><%= link_to '<button>Add a new event!</button>'.html_safe, new_event_path %></p>
 <p style="font-size:10px"><%= link_to "View recent events".html_safe, "events/archive" %> - <%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %> </p>
 
 
@@ -22,7 +22,7 @@
   </tr>
  </thread>
 
-<%= render 'event', events: @upcoming_events %>
+<%= render 'archive', archive: @past_events %>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

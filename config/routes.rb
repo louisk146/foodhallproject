@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/events/archive' => 'events#archive' # or match for older Rails versions
+resources :events
+
   devise_for :users
   get 'static_pages/about'
 
@@ -9,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :events do
   	resources :eventcomments
+     get :archive
 end
 
   resources :foodfreecycles do

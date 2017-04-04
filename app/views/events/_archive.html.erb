@@ -1,0 +1,20 @@
+<tbody>
+  <% @past_events.each do |event|%> 
+    <tr>
+      <td style="padding:5px 10px 5px 10px;"><%= image_tag event.image.url(:medium) %></td>
+      <td style="padding:5px 10px 5px 10px; font-weight:bold"><%= event.title %></td>
+      <td style="padding:5px 10px 5px 10px; font-size:12px"> <%= event.location %></td>
+      <td style="min-width:10px padding:5px 10px 5px 10px; font-size:12px"><%= truncate event.description, length: 200 %>
+      <p style="font-size:10px">  <%= link_to 'More', event %></p> </td>
+     <!-- <td style="padding:5px 10px 5px 10px; font-size:12px"><%= event.description %></td> -->
+      <td style="padding:5px 10px 5px 10px; font-size:12px"><%= event.date %>   </td>
+      <td style="padding:5px 10px 5px 10px;font-size:12px"><%= event.email %></td>
+      <!--<td style="padding:5px 10px 5px 12px;"><%= link_to 'Show', event_path(event) %></td> -->
+      <td style="padding:5px 10px 5px 12px; font-size:10px"><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td style="padding:5px 10px 5px 12px; font-size:10px"><%= link_to 'Delete', event_path(event),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td> 
+      
+  </tbody>
+  <% end %>
+</table>

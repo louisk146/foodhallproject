@@ -11,6 +11,12 @@ def search
   end
 end
 
+def archive
+  @events = Event.all.order(date: :desc)
+  @upcoming_events = Event.where("date > ?", Time.now)
+  @past_events = Event.where("date < ?", Time.now)
+end
+
 
   def index
     @events = Event.all.order(date: :desc)
