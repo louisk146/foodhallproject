@@ -1,12 +1,10 @@
 <body class="container events">
-<%= link_to '<button>Back</button>'.html_safe, controller: 'welcome' %>
+<%= link_to '<button>Back</button>'.html_safe, events_path %>
 
-<p><br> Events that have recently happened in your area! </p>
+<p><br> Events that recently happened in your community. </p>
 
 <p><%= link_to '<button>Add a new event!</button>'.html_safe, new_event_path %></p>
-<p style="font-size:10px"><%= link_to "View recent events".html_safe, "events/archive" %> - <%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %> </p>
-
-
+<p style="font-size:10px"><%= link_to "View upcoming events".html_safe, controller: 'events' %> - <!--<%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %> --> </p>
 
  <thread>
 <table>
