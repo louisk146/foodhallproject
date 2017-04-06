@@ -12,6 +12,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
+gem 'tire'
+
 gem 'react-rails', '~> 1.7', '>= 1.7.1'
 
 gem 'therubyracer', :platforms => :ruby

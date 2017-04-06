@@ -2,14 +2,14 @@ class EventsController < ApplicationController
 
 http_basic_authenticate_with name: "Foodhall", password: "topsecretpassword", only: :destroy
 
-def search
-  @songs = Event.search(params[:query])
-  if request.xhr?
-    render :json => @event.to_json
-  else
-    render :index
-  end
-end
+#def search
+ # @songs = Event.search(params[:query])
+  #if request.xhr?
+   # render :json => @event.to_json
+  #else
+   # render :index
+  #end
+#end
 
 def archive
   @events = Event.all.order(date: :desc)
@@ -18,11 +18,25 @@ def archive
 end
 
 
-  def index
-    @events = Event.all.order(date: :desc)
+def index
+    @events = Event.search((params[:q].present? ? params[:q] :'*')).records
     @upcoming_events = Event.where("date > ?", Time.now)
-    @past_events = Event.where("date < ?", Time.now)
-  end
+    #@past_events = Event.where("date < ?", Time.now)
+end
+  
+#other search controls
+   # @events = Event.search((params[:q].present? ? params[:q] : '*')).records
+
+#ghosts of different search controls
+   # search = params[:term].present? ? params[:term] : nil
+  #@events = if search
+   # Event.where('title LIKE ? OR description LIKE ?', "%#{search}%", "%#{search}%")
+  #else
+   # Event.all.order(date: :desc)
+  #end
+
+
+   #@events =Event.search(params[:term])
 
  def show
     @event = Event.find(params[:id])

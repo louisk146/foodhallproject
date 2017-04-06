@@ -6,6 +6,17 @@
 <p><%= link_to '<button>Create a new event</button>'.html_safe, new_event_path %></p>
 <p style="font-size:10px"><%= link_to "View recent events".html_safe, "events/archive" %> - <!--<%= link_to 'Get Email Updates'.html_safe, new_user_registration_path %>--> </p>
 
+<%= form_tag events_path, method: :get do %>
+<p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= button_tag "Search", name: nil %>
+    <% end %>
+
+<!--different search tools 
+  <%= form_tag(events_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %> -->
 
 
  <thread>
